@@ -156,8 +156,10 @@ class netease_music:
 def main(path=''):
     if not path:
         pre = '/'.join(os.getcwd().split(os.sep)[:3])
+        pre = ''
         if os.sys.platform.lower().startswith('win'):  # windows
-            path = pre + '/AppData/Local/Netease/CloudMusic/Cache/Cache'
+            path = pre + 'C:/Users/***/AppData/Local/Netease/CloudMusic/Cache/Cache'
+            
         else:  # mac or linux
             path = pre + '/Library/Containers/com.netease.163music/Data/Caches/online_play_cache'
     if os.path.isdir(path):
